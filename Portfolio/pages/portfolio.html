@@ -5,23 +5,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <title>Portfólio</title>
 
 </head>
 
 <body>
-    <div class="topnav">
-        <a class="active" href="index.html">Home</a>
-        <a href="contato.html">Contato</a>
-        <a href="portfolio.html">Portfólio</a>
-        <a href="sobre.html">Sobre mim</a>
-    </div>
+    <section>
     <div>
-        <h1>taylor</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi exercitationem impedit tempore debitis
-            magni ut rerum possimus sunt cupiditate dolores, ipsam similique explicabo autem, soluta nobis accusamus nam
-            rem vitae!</p>
+      <nav>
+        <ul class="menu">
+          <li><a href="/pages/index.html" class="ativo">Taylor Henrique</a></li>
+          <li><a href="/pages/sobre.html" >Sobre</a></li>
+          <li><a href="/pages/portfolio.html"class="active">Portfólio</a></li>
+          <li><a href="/pages/servicos.html">Serviços</a></li>
+          <li><a href="/pages/contato.html">Contato</a></li>
+        </ul>
+      </nav>
     </div>
+  </section>
+    <section class="projetos">
+
+  <h1>Meus Projetos</h1>
+  <br>
+
+  <div class="projetos-container">
+
+    <a href="https://github.com/EquipeEcho/EchoNova.git"
+       target="_blank"
+       class="card principal">
+
+      <img src="/img/echonova.jpg" alt="EchoNova">
+      <div class="badge">Recente</div>
+      
+
+      <div class="card-content">
+        <h3>EchoNova</h3>
+        <p>Sistema para diagnóstico inteligente de treinamentos corporativos.</p>
+
+        <div class="tech">
+          <span>JavaScript</span>
+          <span>TypeScript</span>
+            <span>React</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+            <span>Ollama</span>
+        </div>
+      </div>
+
+    </a>
+     <a href="https://github.com/TaylorSilva2/AV3.git"
+       target="_blank"
+       class="card">
+
+      <img src="/img/aerocode.jpg" alt="Aerocode">
+
+      <div class="card-content">
+        <h3>Aerocode</h3>
+        <p>Sistema completo desenvolvido em TypeScript para gerenciamento de produção de aeronaves.</p>
+
+        <div class="tech">
+          <span>TypeScript</span>
+          <span>React</span>
+          <span>Express</span>
+          <span>Prisma</span>
+          <span>MySQL</span>
+        </div>
+      </div>
+
+    </a>
+    </a>
+     <a href="https://github.com/EquipeEcho/EchoNova.git"
+       target="_blank"
+       class="card">
+
+      <img src="/img/easyscrum.jpg" alt="EasyScrum">
+
+      <div class="card-content">
+        <h3>EasyScrum</h3>
+        <p>Desenvolvimento de site informativo e educacional sobre o método Scrum.</p>
+
+        <div class="tech">
+          <span>HTML</span>
+          <span>CSS</span>
+        </div>
+      </div>
+
+    </a>
+</a>
+     <a href="https://github.com/EquipeEcho/botEcho.git"
+       target="_blank"
+       class="card">
+
+      <img src="/img/botecho.jpg" alt="BoTechO">
+
+      <div class="card-content">
+        <h3>BoTechO</h3>
+        <p>Ambiente de Desenvolvimento Integrado com suporte a IA para análise de código e geração de gráficos com Python e Matplotlib.</p>
+
+        <div class="tech">
+          <span>Java</span>
+          <span>MySQL</span>
+        </div>
+      </div>
+
+    </a>
+    
+
+
+
+  </div>
+
+</section>
 </body>
 
 </html>
