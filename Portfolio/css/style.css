@@ -13,6 +13,7 @@ nav {
   z-index: 1000;
 }
 
+
 .menu {
   list-style: none;
   display: flex;              
@@ -642,8 +643,226 @@ hr {
 }
 
 /* Responsividade */
+@media (max-width: 992px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .right {
+    padding: 60px 40px;
+  }
+
+  .right h1 {
+    font-size: 40px;
+  }
+
+  .profile img {
+    width: 320px;
+    height: 320px;
+  }
+
+  .sobre {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sobre-img,
+  .sobre-container {
+    width: 100%;
+  }
+
+  .sobre-container {
+    padding: 40px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .card.principal {
+    grid-column: span 2;
+  }
+
+  .servicos {
+    padding: 90px 10%;
+  }
+}
+
 @media (max-width: 768px) {
+  nav {
+    position: static;
+    padding: 14px 12px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  .menu a.active {
+    padding-bottom: 2px;
+  }
+
+  .hero {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    min-height: 55vh;
+    padding: 30px 20px;
+  }
+
+  .right {
+    padding: 40px 24px;
+  }
+
+  .right h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .right p {
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  .profile img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .sobre h1,
+  .formacao h2,
+  .skills-section h2,
+  .projetos h1,
+  .servicos h1,
+  .contato h1 {
+    font-size: 32px;
+  }
+
+  .sobre-container,
+  .formacao,
+  .skills-section,
+  .projetos,
+  .servicos,
+  .contato,
+  .estudando {
+    padding: 70px 24px;
+  }
+
+  .timeline-item {
+    padding-left: 44px;
+  }
+
+  .timeline::before {
+    left: 14px;
+  }
+
+  .timeline-dot {
+    left: 6px;
+  }
+
+  .projetos-container,
+  .servicos-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card.principal {
+    grid-column: span 1;
+  }
+
+  .card.principal img {
+    height: 200px;
+  }
+
+  .card::after {
+    opacity: 1;
+    position: static;
+    display: inline-block;
+    margin: 0 0 20px 20px;
+  }
+
+  .info-contato {
+    text-align: center;
+  }
+
+  .info-contato .social {
+    justify-content: center;
+  }
+
   .contato-container {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    gap: 10px 12px;
+  }
+
+  .menu a {
+    font-size: 13px;
+  }
+
+  .left {
+    min-height: 48vh;
+  }
+
+  .right {
+    padding: 32px 16px;
+  }
+
+  .right h1 {
+    font-size: 26px;
+  }
+
+  .profile img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .social a {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .sobre h1,
+  .formacao h2,
+  .skills-section h2,
+  .projetos h1,
+  .servicos h1,
+  .contato h1 {
+    font-size: 26px;
+  }
+
+  .sobre-container,
+  .formacao,
+  .skills-section,
+  .projetos,
+  .servicos,
+  .contato,
+  .estudando {
+    padding: 56px 16px;
+  }
+
+  .form-contato input,
+  .form-contato textarea,
+  .form-contato button {
+    font-size: 14px;
   }
 }
