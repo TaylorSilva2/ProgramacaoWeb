@@ -663,13 +663,19 @@ hr {
   }
 
   .sobre {
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
   }
 
-  .sobre-img,
+  .sobre-img {
+    width: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .sobre-container {
-    width: 100%;
+    width: 62%;
   }
 
   .sobre-container {
@@ -752,6 +758,14 @@ hr {
   .servicos h1,
   .contato h1 {
     font-size: 32px;
+  }
+
+  .sobre-img {
+    display: none;
+  }
+
+  .sobre-container {
+    width: 100%;
   }
 
   .sobre-container,
