@@ -3,31 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
     <title>toDoList</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <section class="cadastro">
-        <h1>toDoList</h1>
-        <h2>Cadastre suas tarefas</h2>
-        <form action="">
-            <input type="text" placeholder="Nome da tarefa">
-            <input type="date" placeholder="Data de vencimento">
-            
-        <label for="prioridade:"></label>
-        <select name="prioridade" id="prioridade">
-            <option value="baixa">Baixa</option>
-            <option value="media">Média</option>
-            <option value="alta">Alta</option>
-        </select>        
-        <button type="submit">Adicionar</button>
-        </form>
-        
 
-    </section>
-    <section class ="tarefas">
-        <h1>Minhas Tarefas</h1>
+<h1>toDoList</h1>
 
-    </section>
+
+<div class="container">
+
+
+<div class="formulario">
+
+<h2>Nova Tarefa</h2>
+
+<input type="text" id="nome" placeholder="Nome da tarefa">
+
+<select id="categoria">
+<option value="">Categoria</option>
+<option value="Trabalho">Trabalho</option>
+<option value="Estudos">Estudos</option>
+<option value="Pessoal">Pessoal</option>
+</select>
+
+<select id="prioridade">
+<option value="">Prioridade</option>
+<option value="Alta">Alta</option>
+<option value="Média">Média</option>
+<option value="Baixa">Baixa</option>
+</select>
+
+<input type="date" id="data">
+
+<button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+
+</div>
+
+
+<div class="tarefas">
+
+<h2>Lista de Tarefas</h2>
+
+<select id="filtroCategoria" onchange="filtrarTarefas()">
+<option value="Todas">Todas</option>
+<option value="Trabalho">Trabalho</option>
+<option value="Estudos">Estudos</option>
+<option value="Pessoal">Pessoal</option>
+</select>
+
+<div id="listaTarefas"></div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
