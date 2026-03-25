@@ -9,9 +9,11 @@
 
 <body>
 
+<div class="app">
+<header>
 <h1>toDoList</h1>
-
-
+<button onclick="darkMode()">🌙</button>
+</header>
 <div class="container">
 
 
@@ -37,7 +39,7 @@
 
 <input type="date" id="data">
 
-<button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+<button onclick="adicionarTarefa()" class="btn-add">Adicionar Tarefa</button>
 
 </div>
 
@@ -57,6 +59,7 @@
 
 </div>
 
+</div>
 </div>
 
 <script src="script.js"></script>

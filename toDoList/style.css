@@ -1,47 +1,154 @@
-body{
-font-family: Arial;
-background:#f4f4f4;
-text-align:center;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
 }
 
+body{
+background: linear-gradient(135deg, #667eea, #764ba2);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:#333;
+transition:0.3s;
+}
 
+.app{
+background:white;
+width:90%;
+max-width:900px;
+border-radius:20px;
+padding:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
 
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
 
+header button{
+border:none;
+background:#eee;
+padding:10px;
+border-radius:50%;
+cursor:pointer;
+transition:0.3s;
+}
+
+header button:hover{
+background:#ddd;
+}
+
+.container{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.formulario, .tarefas{
+flex:1;
+background:#f9f9f9;
+padding:15px;
+border-radius:15px;
+}
+
+input, select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+.btn-add{
+background:#667eea;
+color:white;
+border:none;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn-add:hover{
+background:#5a67d8;
+}
 
 .card{
 background:white;
 padding:15px;
-margin:10px;
-border-radius:10px;
-box-shadow:0 2px 5px rgba(0,0,0,0.2);
+margin-top:10px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
-.alta{
-color:red;
-font-weight:bold;
+.card:hover{
+transform:scale(1.02);
 }
 
-.media{
-color:orange;
-font-weight:bold;
-}
-
-.baixa{
-color:green;
-font-weight:bold;
-}
+.alta{color:#e53e3e;}
+.media{color:#dd6b20;}
+.baixa{color:#38a169;}
 
 .concluida{
 text-decoration:line-through;
 opacity:0.6;
 }
 
-button{
-margin-top:5px;
+.card button{
+margin-top:8px;
+margin-right:5px;
 padding:5px 10px;
+border:none;
+border-radius:8px;
 cursor:pointer;
 }
 
-button:hover{
-background:#ddd;
+.card button:first-child{
+background:#48bb78;
+color:white;
+}
+
+.card button:last-child{
+background:#e53e3e;
+color:white;
+}
+
+
+
+body.dark{
+background:#121212;
+}
+
+body.dark .app{
+background:#1e1e1e;
+color:white;
+}
+
+body.dark .formulario,
+body.dark .tarefas{
+background:#2a2a2a;
+}
+
+body.dark input,
+body.dark select{
+background:#333;
+color:white;
+border:none;
+}
+
+body.dark .card{
+background:#2a2a2a;
+}
+body.dark .btn-add{
+background:#48bb78;
+}
+body.dark .btn-add:hover{
+background:#38a169;
 }

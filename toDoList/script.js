@@ -50,7 +50,7 @@ card.innerHTML = `
 <h3>${tarefa.nome}</h3>
 <p>Categoria: ${tarefa.categoria}</p>
 <p class="${classePrioridade}">Prioridade: ${tarefa.prioridade}</p>
-<p>Data: ${tarefa.data}</p>
+<p>Data: ${formatarDataBR(tarefa.data)}</p>
 
 <button onclick="concluir(${index})">Concluir</button>
 <button onclick="excluir(${index})">Excluir</button>
@@ -70,6 +70,29 @@ mostrarTarefas()
 function excluir(index){
 tarefas.splice(index,1)
 mostrarTarefas()
+}
+function formatarDataBR(dataISO){
+
+let partes = dataISO.split("-") 
+
+let ano = partes[0]
+let mes = partes[1]
+let dia = partes[2]
+
+return `${dia}/${mes}/${ano}`
+
+}
+function darkMode() {
+ 
+
+document.body.classList.toggle("dark")
+
+if(document.body.classList.contains("dark")){
+localStorage.setItem("tema","dark")
+}else{
+localStorage.setItem("tema","light")
+}
+
 }
 
 function filtrarTarefas(){
