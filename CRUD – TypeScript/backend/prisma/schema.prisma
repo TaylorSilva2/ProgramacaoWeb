@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+  id       Int       @id @default(autoincrement())
+  nome     String
+  email    String    @unique
+  senha    String
+  createdAt DateTime @default(now())
+}
+
+model Continente {
+  id        Int      @id @default(autoincrement())
+  nome      String   @unique
+  descricao String?
+  paises    Pais[]
+}
+
+model Pais {
+  id            Int       @id @default(autoincrement())
+  nome          String
+  populacao     Int
+  idiomaOficial String
+  moeda         String
+  continenteId  Int
+  continente    Continente @relation(fields: [continenteId], references: [id])
+  cidades       Cidade[]
+}
+
+model Cidade {
+  id        Int    @id @default(autoincrement())
+  nome      String
+  populacao Int
+  latitude  Float
+  longitude Float
+  paisId    Int
+  pais      Pais   @relation(fields: [paisId], references: [id])
+}
