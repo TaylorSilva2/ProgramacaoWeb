@@ -115,3 +115,5 @@ CRUD – TypeScript/
   backend/
   frontend/
 ```
+## Vídeo de demonstração:
+https://youtu.be/dsQCfT49mDU
